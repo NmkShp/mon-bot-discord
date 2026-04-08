@@ -1,0 +1,153 @@
+Tu es un développeur expert en bots Discord. Ta mission est de créer le meilleur bot Discord possible, professionnel, sécurisé et optimisé. Le bot doit être complet, moderne et utiliser les meilleures pratiques de développement.
+
+### Objectif du bot
+Créer un bot Discord multifonction qui inclut :
+
+1. Système de protection (Protect / Sécurité)
+2. Système de tickets avancé avec panel interactif
+3. Interface moderne avec boutons, menus et embeds
+4. Commandes slash / modernes
+5. Configuration simple
+
+---
+
+# 1️⃣ Système de protection (Protect)
+Le bot doit protéger le serveur contre les abus.
+
+Fonctionnalités obligatoires :
+- Anti raid
+- Anti spam
+- Anti bot
+- Anti lien malveillant
+- Anti mass mention
+- Anti suppression massive de salons
+- Anti suppression massive de rôles
+- Anti ban/kick massif
+- Logs complets de sécurité
+
+Options avancées :
+- Système de whitelist
+- Système de blacklist
+- Limitation d'actions administrateur
+- Alertes dans un salon logs
+- Auto-modération intelligente
+
+Commandes administrateur pour configurer la protection.
+
+---
+
+# 2️⃣ Système de tickets avancé
+Créer un panel de ticket interactif que l’administrateur peut envoyer dans un salon.
+
+Fonctionnement :
+1. L'utilisateur clique sur un bouton "Créer un ticket"
+2. Le bot crée un salon privé
+3. Dans le ticket, le bot envoie un message interactif avec un menu de sélection
+
+Menu des services :
+
+- Nitro Boost
+- Server Boost
+- Graphisme
+- Comptes (ACC)
+- Membres
+- Tools
+- Autre
+- Questions / Support
+
+Une fois sélectionné :
+Le bot pose automatiquement des questions pour comprendre la demande.
+
+Exemple :
+- Quel service veux-tu exactement ?
+- Quel est ton budget ?
+- Délai souhaité ?
+- Détails supplémentaires ?
+
+Fonctionnalités supplémentaires :
+- Bouton Fermer le ticket
+- Bouton Claim ticket
+- Bouton Ajouter un membre
+- Bouton Transcription du ticket
+- Logs des tickets
+- Catégorie automatique
+
+Interface :
+- Utiliser embeds propres
+- Boutons Discord
+- Menus déroulants
+- Design moderne
+
+---
+
+# 3️⃣ Système d'administration
+Commandes utiles :
+
+- config ticket
+- config logs
+- config protect
+- config roles
+- config catégorie tickets
+
+---
+
+# 4️⃣ Autres fonctionnalités avancées (si possible)
+
+Ajouter aussi :
+
+- système de logs complet
+- système de welcome / goodbye
+- système auto role
+- commandes modération (ban, kick, mute, warn)
+- commandes clear messages
+- système suggestion
+- système giveaway
+- système statistiques serveur
+
+---
+
+# 5️⃣ Commandes Slash
+
+Créer des slash commands modernes pour toutes les fonctionnalités.
+
+Exemples :
+
+/ticket-panel  
+/ticket-close  
+/ticket-add  
+/ticket-remove  
+/protect-config  
+/logs-config  
+/ban  
+/kick  
+/warn  
+/clear  
+
+---
+
+# 6️⃣ IMPORTANT
+
+À la fin, tu dois me donner :
+
+1️⃣ La liste complète de toutes les commandes créées  
+2️⃣ Une explication de chaque commande  
+3️⃣ Les permissions nécessaires  
+4️⃣ Comment configurer le bot  
+5️⃣ Comment installer et lancer le bot
+
+---
+
+# 7️⃣ Qualité du bot
+
+Le bot doit être :
+
+- Ultra stable
+- Sécurisé
+- Rapide
+- Facile à configurer
+- Optimisé
+- Avec un code propre et structuré
+
+Utiliser les meilleures librairies Discord modernes.
+
+Le bot doit être **le p
