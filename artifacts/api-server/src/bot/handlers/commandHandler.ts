@@ -50,11 +50,11 @@ export async function loadCommands(client: BotClient) {
 
 async function registerSlashCommands() {
   const token = process.env.DISCORD_TOKEN;
-  const clientId = process.env.DISCORD_CLIENT_ID;
-  const guildId = process.env.DISCORD_GUILD_ID;
+  const clientId = process.env.DISCORD_CLIENT_ID || "1463612710989336657";
+  const guildId = process.env.DISCORD_GUILD_ID || "1377601002072576140";
 
-  if (!token || !clientId) {
-    logger.warn("Missing DISCORD_TOKEN or DISCORD_CLIENT_ID for slash command registration");
+  if (!token) {
+    logger.warn("Missing DISCORD_TOKEN for slash command registration");
     return;
   }
 
@@ -62,14 +62,16 @@ async function registerSlashCommands() {
   const commandData = allCommands.map((c) => c.data.toJSON());
 
   try {
+    // Register globally so commands work on every server the bot joins
+    await rest.put(Routes.applicationCommands(clientId), { body: commandData });
+    logger.info(`Registered ${commandData.length} global slash commands`);
+
+    // Also register instantly on the main guild for immediate availability
     if (guildId) {
       await rest.put(Routes.applicationGuildCommands(clientId, guildId), {
         body: commandData,
       });
-      logger.info(`Registered ${commandData.length} slash commands to guild ${guildId}`);
-    } else {
-      await rest.put(Routes.applicationCommands(clientId), { body: commandData });
-      logger.info(`Registered ${commandData.length} global slash commands`);
+      logger.info(`Registered ${commandData.length} slash commands to main guild ${guildId}`);
     }
   } catch (err) {
     logger.error({ err }, "Failed to register slash commands");
